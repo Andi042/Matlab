@@ -1,0 +1,30 @@
+
+syms x;
+F(x) = sin(x*3)+nthroot(x,3);
+G(x) =x;
+fplot(F);
+ax= gca();
+ax.XAxisLocation="origin";
+ax.YAxisLocation="origin";
+ax.YLim = [-3,3];
+ax.XLim = [-3,3];
+ax.NextPlot="add";
+
+fplot(G)
+
+%fixpont --lassú
+fixpont(F,10^-4)
+disp('nagyon lassú, nem konvergens')% válasz a zh-ra, értelmezni kell nem 'hiba'
+
+%fixpont --gyors
+fixpont(@fgv1,10^-4)%F9 !!!
+disp('nem konvergens')%nem konvergens <--ugrál
+
+%egyenlet megoldás fixpont egyenlettel-- ppt
+%4x^5-x^3+2=0 --> átírás x=
+%3gyök(4x^3+2)=x <--fix1
+fixpont(@fix1,10^-4)
+disp('x0=1 kezdőpontból a végtelenbe tart')%fontos a kezdőpont, de ez is jó megoldás
+%x=5gyök((x^3-2)/4) <--fix2
+fixpont(@fix2,10^-4)
+disp('x0=1 kezdőpontból a megoldás: -0.931717')
