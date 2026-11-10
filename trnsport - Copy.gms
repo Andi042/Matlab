@@ -11,6 +11,10 @@ szemét szállítás
 65 47 37 53 49
 + használt lerakó helyenként 1000
 
+Házi 2:
+négyzetek 17 kurzed kockás pakolós feladat(nehéz feladat)
+
+chatgpt elvileg jól műszik ezen...de dolgozatban nem használható
 szabad ezeket használni zh-n
 $offText
 
